@@ -67,7 +67,7 @@ p {
 }
 
 ::selection {
-  background: #b8a07e;
+  background: #00ffff;
   color: #fff;
 }
 
@@ -635,7 +635,7 @@ p {
 }
 
 .services-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #b8a07e;
+  background-color: #00ff99;
 }
 
 /*--------------------------------------------------------------

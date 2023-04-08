@@ -564,7 +564,7 @@ p {
 
 #about .div-img-bg {
   padding-bottom: 30px;
-  border: 20px solid #b8a07e;
+  border: 20px solid #00ffff;
 }
 
 #about .div-img-bg .about-img img {
@@ -631,7 +631,7 @@ p {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #b8a07e;
+  border: 1px solid #00cc66;
 }
 
 .services-slider .swiper-pagination .swiper-pagination-bullet-active {

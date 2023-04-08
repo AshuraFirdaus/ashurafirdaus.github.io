@@ -158,7 +158,7 @@ p {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #b8a07e;
+  background: #00cc66;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -172,7 +172,7 @@ p {
 }
 
 .back-to-top:hover {
-  background: #c6b398;
+  background: #00ff99;
   color: #fff;
 }
 

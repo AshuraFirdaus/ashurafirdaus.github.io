@@ -10,8 +10,8 @@
 # General
 --------------------------------------------------------------*/
 body {
-  background: #99ffcc;
-  color: #898989;
+  background: #00cc99;
+  color: #003300;
   font-family: "Poppins", helvetica;
   font-size: 15px;
   font-weight: 300;
@@ -67,7 +67,7 @@ p {
 }
 
 ::selection {
-  background: #00ffff;
+  background: #33cc33;
   color: #fff;
 }
 

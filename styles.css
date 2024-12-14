@@ -411,7 +411,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.6) 100%
     ),
-    url("/ashurafirdaus.github.io/images/Cloud.jpg");
+    url("/images/Cloud.jpg");
   background-size: cover;
   position: relative;
   color: #fff;
@@ -428,7 +428,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.6) 100%
     ),
-    url("/ashurafirdaus.github.io/images/Cloud.jpg");
+    url("/images/Cloud.jpg");
 }
 
 .services__container:nth-of-type(1) .services__card:nth-child(2) {
@@ -437,7 +437,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.6) 100%
     ),
-    url("/ashurafirdaus.github.io/images/Linux.jpg");
+    url("/images/Linux.jpg");
 }
 
 .services__container:nth-of-type(1) .services__card:nth-child(3) {
@@ -446,7 +446,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.6) 100%
     ),
-    url("/ashurafirdaus.github.io/images/network.jpg");
+    url("/images/network.jpg");
 }
 
 /* Second row cards */
@@ -456,7 +456,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.6) 100%
     ),
-    url("/ashurafirdaus.github.io/images/webdev.jpg");
+    url("/images/webdev.jpg");
 }
 
 .services__container:nth-of-type(2) .services__card:nth-child(2) {
@@ -465,7 +465,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.6) 100%
     ),
-    url("/ashurafirdaus.github.io/images/DevOps.png");
+    url("/images/DevOps.png");
 }
 
 .services__container:nth-of-type(2) .services__card:nth-child(3) {
@@ -474,7 +474,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.6) 100%
     ),
-    url("/ashurafirdaus.github.io/images/python.png");
+    url("/images/python.png");
 }
 
 .services__card h2 {

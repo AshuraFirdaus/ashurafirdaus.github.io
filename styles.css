@@ -828,3 +828,58 @@
     color: #f7f7f7;
   }
 }
+
+/* Base styles for reveal animations */
+.reveal-from-left,
+.reveal-from-right,
+.reveal-from-bottom,
+.reveal-from-top {
+  opacity: 0;
+  visibility: hidden;
+  will-change: transform, opacity;
+  transition: all 1.2s cubic-bezier(0.5, 0, 0, 1); /* Increased from 0.8s to 1.2s */
+}
+
+/* Initial positions - increased distance for smoother effect */
+.reveal-from-left {
+  transform: translateX(-150px); /* Increased from -100px */
+}
+
+.reveal-from-right {
+  transform: translateX(150px); /* Increased from 100px */
+}
+
+.reveal-from-bottom {
+  transform: translateY(150px); /* Increased from 100px */
+}
+
+.reveal-from-top {
+  transform: translateY(-150px); /* Increased from -100px */
+}
+
+/* Active states */
+.reveal-from-left.active,
+.reveal-from-right.active,
+.reveal-from-bottom.active,
+.reveal-from-top.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+}
+
+/* Add slower transition for hiding elements */
+.reveal-from-left:not(.active),
+.reveal-from-right:not(.active),
+.reveal-from-bottom:not(.active),
+.reveal-from-top:not(.active) {
+  transition: all 1.2s cubic-bezier(0.5, 0, 0, 1); /* Increased from 0.8s */
+}
+
+/* Alternative smoother timing function */
+.reveal-from-left,
+.reveal-from-right,
+.reveal-from-bottom,
+.reveal-from-top {
+  /* ... other properties ... */
+  transition: all 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}

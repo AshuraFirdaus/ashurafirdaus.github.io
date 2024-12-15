@@ -15,7 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/41faef6176.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/41faef6176.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- Navbar Section -->
@@ -37,7 +40,12 @@
             <ul class="dropdown__menu">
               <li><a href="https://github.com/AshuraFirdaus">Github</a></li>
               <li><a href="/Applications/">Applications</a></li>
-              <li><a href="https://drive.google.com/drive/folders/1BC69aZdIMxcsb2cS0Uh4iBLMpB5Avgd6?usp=drive_link">Google Drive</a></li>
+              <li>
+                <a
+                  href="https://drive.google.com/drive/folders/1BC69aZdIMxcsb2cS0Uh4iBLMpB5Avgd6?usp=drive_link"
+                  >Google Drive</a
+                >
+              </li>
             </ul>
           </li>
           <li class="navbar__item dropdown">
@@ -48,67 +56,105 @@
               <li><a href="/Certifications/Activities/">Activities</a></li>
             </ul>
           </li>
-          <li class="navbar__btn"><a href="/Contact-me/" class="button">Contact</a></li>
+          <li class="navbar__btn">
+            <a href="/Contact-me/" class="button">Contact</a>
+          </li>
         </ul>
       </div>
     </nav>
 
     <!-- Hero Section -->
     <div class="main">
-      <div class="main__container">
-        <div class="main__content">
-          <h1>Muhamad Firdaus</h1>
-          <h2>Cloud Engineer</h2>
-          <p>Welcome to my site!</p>
-          <button class="main__btn"><a href="/About-me/">About Me</a></button>
-        </div>
-        <div class="main__img--container">
-          <img id="main__img" src="images/ws-1.svg" />
+      <div class="main reveal-from-left">
+        <div class="main__container">
+          <div class="main__content">
+            <h1>Muhamad Firdaus</h1>
+            <h2>Cloud Engineer</h2>
+            <p>Welcome to my site!</p>
+            <button class="main__btn"><a href="/About-me/">About Me</a></button>
+          </div>
+          <div class="main__img--container">
+            <img id="main__img" src="images/ws-1.svg" />
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Experiences Section -->
-    <div class="services">
-      <h1>Experienced in</h1>
-      <div class="services__container">
-        <!-- Photo by Tara Winstead from Pexels: https://www.pexels.com/photo/robot-s-hand-on-a-blue-background-8386437/-->
-        <div class="services__card">
-          <h2>Cloud Engineering</h2>
-          <p>Manages Cloud Infrastructure</p>
-          <button>Get Started</button>
-        </div>
-        <!-- Photo by Sora Shimazaki: https://www.pexels.com/photo/crop-hacker-typing-on-laptop-with-data-on-screen-5935788/ -->
-        <div class="services__card">
-          <h2>Linux SysAdmin</h2>
-          <p>Administrating Linux Systems</p>
-          <button>Get Started</button>
-        </div>
-        <!-- Photo by Brett Sayles: https://www.pexels.com/photo/numerous-wires-mounted-into-patch-panel-5087172/ -->
-        <div class="services__card">
-          <h2>Networking</h2>
-          <p>Control Network Traffic</p>
-          <button>Get Started</button>
+    <section class="blog-section">
+      <div class="blog-container">
+        <div class="blog-container reveal-from-right">
+          <div class="blog-content">
+            <div class="blog-image">
+              <img
+                src="/ashurafirdaus.github.io/images/about-me.png"
+                alt="Blog image"
+              />
+            </div>
+            <div class="blog-text" data-delay="0">
+              <h2>Introduction</h2>
+              <p>
+                A Computer Science student graduated from Institut Sains dan
+                Teknologi Nasional, Jakarta. Always eager to learn and update
+                his knowledge regarding anything new about technology.
+              </p>
+              <p>
+                On free time he usually watches some anime and enjoying time to
+                play some games, active on IT Community gathering and love to
+                exchange knowledge with everyone.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- Photo by Gagareen: https://www.pexels.com/photo/close-up-shot-of-a-computer-monitor-7107487/ -->
-      <div class="services__container">
-        <div class="services__card">
-          <h2>Web Development</h2>
-          <p>HTML, CSS, JavaScript</p>
-          <button>Get Started</button>
+    </section>
+
+    <!-- Experiences Section -->
+    <div class="services">
+      <div class="services reveal-from-left">
+        <h1 class="reveal-from-bottom">Experienced in</h1>
+        <div class="services__container">
+          <!-- Photo by Tara Winstead from Pexels: https://www.pexels.com/photo/robot-s-hand-on-a-blue-background-8386437/-->
+          <div class="services__card reveal-from-left" data-delay="100">
+            <div class="services__card">
+              <h2>Cloud Engineering</h2>
+              <p>Manages Cloud Infrastructure</p>
+              <button>Get Started</button>
+            </div>
+          </div>
+          <!-- Photo by Sora Shimazaki: https://www.pexels.com/photo/crop-hacker-typing-on-laptop-with-data-on-screen-5935788/ -->
+          <div class="services__card reveal-from-left" data-delay="300">
+            <h2>Linux SysAdmin</h2>
+            <p>Administrating Linux Systems</p>
+            <button>Get Started</button>
+          </div>
+          <!-- Photo by Brett Sayles: https://www.pexels.com/photo/numerous-wires-mounted-into-patch-panel-5087172/ -->
+          <div class="services__card reveal-from-left" data-delay="500">
+            <h2>Networking</h2>
+            <p>Control Network Traffic</p>
+            <button>Get Started</button>
+          </div>
         </div>
-        <div class="services__card">
-          <h2>DevOps</h2>
-          <p>CI/CD Pipeline</p>
-          <button>Get Started</button>
+        <!-- Photo by Gagareen: https://www.pexels.com/photo/close-up-shot-of-a-computer-monitor-7107487/ -->
+        <div class="services reveal-from-left">
+          <div class="services__container">
+            <div class="services__card reveal-from-left" data-delay="100">
+              <h2>Web Development</h2>
+              <p>HTML, CSS, JavaScript</p>
+              <button>Get Started</button>
+            </div>
+            <div class="services__card reveal-from-left" data-delay="300">
+              <h2>DevOps</h2>
+              <p>CI/CD Pipeline</p>
+              <button>Get Started</button>
+            </div>
+            <div class="services__card reveal-from-left" data-delay="500">
+              <h2>Automation</h2>
+              <p>Python & Shell Scripting</p>
+              <button>Get Started</button>
+            </div>
+          </div>
         </div>
-        <div class="services__card">
-          <h2>Automation</h2>
-          <p>Python & Shell Scripting</p>
-          <button>Get Started</button>
-        </div>
-      </div>      </div>
+      </div>
     </div>
 
     <!-- Footer Section -->
@@ -118,25 +164,34 @@
           <div class="footer__link--items">
             <h2>About Me</h2>
             <a href="/About-me/">About Me</a> <a href="/exp/">Experience</a>
-            <a href="/Applications/">Projects</a> <a href="/Certifications/Courseworks/">Courseworks</a>
+            <a href="/Applications/">Projects</a>
+            <a href="/Certifications/Courseworks/">Courseworks</a>
             <a href="/Certifications/Professional/">Certifications</a>
           </div>
           <div class="footer__link--items">
             <h2>Contact Me</h2>
-            <a href="https://wa.me/+6281251044277">WhatsApp</a> <a href="mailto:firdausmail07@gmail.com">Email</a>
-            <a href="https://www.linkedin.com/messaging/compose/?recipient=muhamadfirdaus24">LinkedIn</a>
+            <a href="https://wa.me/+6281251044277">WhatsApp</a>
+            <a href="mailto:firdausmail07@gmail.com">Email</a>
+            <a
+              href="https://www.linkedin.com/messaging/compose/?recipient=muhamadfirdaus24"
+              >LinkedIn</a
+            >
           </div>
         </div>
         <div class="footer__link--wrapper">
           <div class="footer__link--items">
             <h2>Activities</h2>
-            <a href="/Activities/IT-gathering/">IT Community</a> <a href="/Activities/Hackathon/">Hackathon</a>
+            <a href="/Activities/IT-gathering/">IT Community</a>
+            <a href="/Activities/Hackathon/">Hackathon</a>
             <a href="/Activities/Events/">Public Events</a>
           </div>
           <div class="footer__link--items">
             <h2>Social Media</h2>
             <a href="https://www.instagram.com/ashurafirdaus/">Instagram</a>
-            <a href="https://www.youtube.com/channel/UCVGmsfKCpKA2i8TbnxZmYDw">Youtube</a> <a href="https://www.linkedin.com/in/muhamadfirdaus24/">LinkedIn</a>
+            <a href="https://www.youtube.com/channel/UCVGmsfKCpKA2i8TbnxZmYDw"
+              >Youtube</a
+            >
+            <a href="https://www.linkedin.com/in/muhamadfirdaus24/">LinkedIn</a>
           </div>
         </div>
       </div>

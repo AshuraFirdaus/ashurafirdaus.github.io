@@ -751,3 +751,80 @@
   font-size: 0.7em;
   margin-left: 5px;
 }
+
+.blog-section {
+  padding: 4rem 0;
+  background: #fff; /* or any background color you prefer */
+}
+
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.blog-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.blog-image {
+  flex: 1;
+  min-width: 300px; /* Minimum width before wrapping */
+}
+
+.blog-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+.blog-text {
+  flex: 2;
+  min-width: 300px; /* Minimum width before wrapping */
+}
+
+.blog-text h2 {
+  color: #131313;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.blog-text p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .blog-content {
+    flex-direction: column;
+  }
+
+  .blog-image {
+    width: 100%;
+  }
+
+  .blog-text {
+    width: 100%;
+  }
+}
+
+/* For dark theme (optional) */
+@media (prefers-color-scheme: dark) {
+  .blog-section {
+    background: #131313;
+  }
+
+  .blog-text h2 {
+    color: #fff;
+  }
+
+  .blog-text p {
+    color: #f7f7f7;
+  }
+}

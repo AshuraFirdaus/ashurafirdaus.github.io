@@ -360,8 +360,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Changed from fixed height to min-height */
-  padding: 50px 0; /* Add padding for better spacing */
+  min-height: 30vh; /* Changed from fixed height to min-height */
+  padding: 30px 0; /* Add padding for better spacing */
 }
 
 .services h1 {
@@ -395,7 +395,7 @@
   width: 100%;
 }
 
-/* First, ensure each card has proper positioning */
+/* Ensure each card has proper positioning */
 .services__card {
   margin: 1rem;
   height: 525px;
@@ -408,7 +408,7 @@
   color: #fff;
   transition: transform 0.3s ease-in-out;
   transform: scale(1);
-  /* Add these to ensure proper stacking */
+  /* ensure proper stacking */
   z-index: 1;
   /* Ensure the background is properly contained */
   background-position: center;
@@ -427,7 +427,6 @@
 }
 
 /* Remove any duplicate hover effects */
-/* Delete these if they exist in your CSS */
 .services__card:hover {
   transform: scale(1.075);
   transition: 0.2s ease-in;
@@ -439,13 +438,17 @@
   border: 2px solid red; /* Temporary test border */
 }
 
-/* Add different colors for each row to debug */
 .services__container.first-row .services__card {
   border-color: blue;
 }
 
 .services__container.second-row .services__card {
   border-color: green;
+}
+
+/* Specifically adjust the second row container */
+.services__container.second-row {
+  margin-bottom: 2rem; /* Reduce this value to decrease space above footer */
 }
 
 /* Background images for first row */
@@ -559,7 +562,7 @@
 
   .services h1 {
     font-size: 2rem;
-    margin-top: 2rem; /* Reduced from 12rem */
+    margin-top: 2rem;
     margin-bottom: 2rem;
     padding: 0 20px;
     text-align: center;
@@ -611,7 +614,13 @@
   }
 
   .services__container {
-    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    max-width: 1400px;
+    margin: 0 auto 2rem auto; /* Reduce bottom margin between containers */
+    width: 100%;
   }
 }
 

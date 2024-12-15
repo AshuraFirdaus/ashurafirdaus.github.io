@@ -33,7 +33,39 @@ function initRevealOnScroll() {
     });
   };
 
-  const observer = new IntersectionObserver(revealCallback, options);
+  // Modify your Intersection Observer options
+  const observerOptions = {
+    root: null, // viewport
+    rootMargin: "0px 50px 50px 0px", // Add margin to right and bottom
+    threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0], // multiple thresholds // Reduce threshold to make detection more lenient
+  };
+
+  const observer = new IntersectionObserver(
+    revealCallback,
+    options,
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          const visiblePercentage = entry.intersectionRatio * 100;
+          // Optional: unobserve after animation is triggered
+          observer.unobserve(entry.target);
+          // Only trigger when element is at least 30% visible
+          if (entry.isIntersecting && visiblePercentage >= 30) {
+            entry.target.classList.add("show");
+            // Optional: unobserve after animation is triggered
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    },
+    observerOptions
+  );
+
+  // Apply to all cards
+  document.querySelectorAll(".services__card").forEach((card) => {
+    observer.observe(card);
+  });
 
   const revealElements = document.querySelectorAll(
     ".reveal-from-left, .reveal-from-right, .reveal-from-bottom, .reveal-from-top"

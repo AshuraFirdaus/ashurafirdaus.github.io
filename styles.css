@@ -399,7 +399,7 @@
   width: 100%;
 }
 
-/* First, define the base card styles and hover effect that applies to ALL cards */
+/* First, ensure each card has proper positioning */
 .services__card {
   margin: 1rem;
   height: 450px;
@@ -410,17 +410,49 @@
   background-size: cover;
   position: relative;
   color: #fff;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   transform: scale(1);
+  /* Add these to ensure proper stacking */
+  z-index: 1;
+  /* Ensure the background is properly contained */
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.5s ease-in-out;
+  /* ... other existing styles ... */
 }
 
-/* This hover effect should work for ALL cards */
+/* Ensure the hover effect only applies once */
+.services__container .services__card:hover {
+  transform: scale(1.075);
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Remove any duplicate hover effects */
+/* Delete these if they exist in your CSS */
 .services__card:hover {
   transform: scale(1.075);
+  transition: 0.2s ease-in;
   cursor: pointer;
 }
 
-/* First row cards */
+.services__card {
+  /* ... existing styles ... */
+  border: 2px solid red; /* Temporary test border */
+}
+
+/* Add different colors for each row to debug */
+.services__container.first-row .services__card {
+  border-color: blue;
+}
+
+.services__container.second-row .services__card {
+  border-color: green;
+}
+
+/* Background images for first row */
 .services__container.first-row .services__card:nth-child(1) {
   background-image: linear-gradient(
       to bottom,
@@ -448,7 +480,7 @@
     url("/images/network.jpg");
 }
 
-/* Second row cards */
+/* Background images for second row */
 .services__container.second-row .services__card:nth-child(1) {
   background-image: linear-gradient(
       to bottom,
@@ -458,22 +490,22 @@
     url("/images/webdev.jpg");
 }
 
-.services__container.second-row:nth-child(2) .services__card:nth-child(2) {
+.services__container.second-row .services__card:nth-child(2) {
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.6) 100%
     ),
-    url("/images/DevOps.png");
+    url("/images/DevOps.jpg");
 }
 
-.services__container.second-row:nth-child(2) .services__card:nth-child(3) {
+.services__container.second-row .services__card:nth-child(3) {
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.6) 100%
     ),
-    url("/images/python.png");
+    url("/images/python.jpg");
 }
 
 .services__card h2 {
@@ -509,6 +541,17 @@
   transform: scale(1.075);
   transition: 0.2s ease-in;
   cursor: pointer;
+}
+
+.services__card.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Ensure container has proper overflow handling */
+.services__container {
+  overflow: visible; /* Allow elements to animate outside container */
+  /* ... other existing styles ... */
 }
 
 /* Responsive Design */

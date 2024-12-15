@@ -6,54 +6,6 @@ menu.addEventListener("click", function () {
   menuLinks.classList.toggle("active");
 });
 
-// // Function to handle reveal animations
-// function initRevealOnScroll() {
-//   const options = {
-//     root: null, // use viewport as root
-//     threshold: 0.1, // Trigger when 10% of element is visible
-//     rootMargin: "0px", // no margin
-//   };
-
-//   const revealCallback = (entries, observer) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         // When element enters viewport
-//         entry.target.classList.add("active");
-
-//         // If there's a delay attribute, apply it
-//         const delay = entry.target.getAttribute("data-delay");
-//         if (delay) {
-//           entry.target.style.setProperty("--delay", `${delay}ms`);
-//         }
-//       } else {
-//         // When element leaves viewport
-//         // Add a small delay before hiding to make exit smoother
-//         setTimeout(() => {
-//           if (!entry.isIntersecting) {
-//             entry.target.classList.remove("active");
-//           }
-//         }, 100);
-//       }
-//     });
-//   };
-
-//   const observer = new IntersectionObserver(revealCallback, options);
-
-//   // Observe all elements with reveal classes
-//   const revealElements = document.querySelectorAll(
-//     ".reveal-from-left, .reveal-from-right, .reveal-from-bottom, .reveal-from-top"
-//   );
-
-//   revealElements.forEach((element) => {
-//     // Ensure elements start hidden
-//     element.classList.remove("active");
-//     observer.observe(element);
-//   });
-// }
-
-// // Initialize when DOM is loaded
-// document.addEventListener("DOMContentLoaded", initRevealOnScroll);
-
 function initRevealOnScroll() {
   const options = {
     root: null,

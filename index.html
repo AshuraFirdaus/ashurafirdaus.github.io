@@ -24,7 +24,7 @@
     <!-- Navbar Section -->
     <nav class="navbar">
       <div class="navbar__container">
-        <a href="/ashurafirdaus.github.io/index.html" id="navbar__logo"
+        <a href="/ashurafirdaus.github.io/" id="navbar__logo"
           ><i class="fa-solid fa-terminal"></i>Muhamad Firdaus</a
         >
         <div class="navbar__toggle" id="mobile-menu">
@@ -33,10 +33,12 @@
         </div>
         <ul class="navbar__menu">
           <li class="navbar__item">
-            <a href="/index.html" class="navbar__links">Home</a>
+            <a href="/ashurafirdaus.github.io/" class="navbar__links">Home</a>
           </li>
           <li class="navbar__item dropdown">
-            <a href="#" class="navbar__links">Projects</a>
+            <a href="javascript:void(0)" id="myButton" class="navbar__links"
+              >Projects</a
+            >
             <ul class="dropdown__menu">
               <li><a href="https://github.com/AshuraFirdaus">Github</a></li>
               <li><a href="/Applications/">Applications</a></li>
@@ -49,7 +51,9 @@
             </ul>
           </li>
           <li class="navbar__item dropdown">
-            <a href="#" class="navbar__links">Certifications</a>
+            <a href="javascript:void(0)" id="myButton" class="navbar__links"
+              >Certifications</a
+            >
             <ul class="dropdown__menu">
               <li><a href="/Certifications/Professional/">Professional</a></li>
               <li><a href="/Certifications/Courseworks/">Courseworks</a></li>
@@ -114,19 +118,19 @@
           <div class="services__card reveal-from-left" data-delay="300">
             <h2>Cloud Engineering</h2>
             <p>Manages Cloud Infrastructure</p>
-            <button>Get Started</button>
+            <button>Details</button>
           </div>
           <!-- Photo by Sora Shimazaki: https://www.pexels.com/photo/crop-hacker-typing-on-laptop-with-data-on-screen-5935788/ -->
           <div class="services__card reveal-from-left" data-delay="200">
             <h2>Linux SysAdmin</h2>
             <p>Administrating Linux Systems</p>
-            <button>Get Started</button>
+            <button>Details</button>
           </div>
           <!-- Photo by Brett Sayles: https://www.pexels.com/photo/numerous-wires-mounted-into-patch-panel-5087172/ -->
           <div class="services__card reveal-from-left" data-delay="100">
             <h2>Networking</h2>
             <p>Control Network Traffic</p>
-            <button>Get Started</button>
+            <button>Details</button>
           </div>
         </div>
         <!-- Photo by Gagareen: https://www.pexels.com/photo/close-up-shot-of-a-computer-monitor-7107487/ -->
@@ -135,17 +139,17 @@
             <div class="services__card reveal-from-left" data-delay="300">
               <h2>Web Development</h2>
               <p>HTML, CSS, JavaScript</p>
-              <button>Get Started</button>
+              <button>Details</button>
             </div>
             <div class="services__card reveal-from-left" data-delay="200">
               <h2>DevOps</h2>
               <p>CI/CD Pipeline</p>
-              <button>Get Started</button>
+              <button>Details</button>
             </div>
             <div class="services__card reveal-from-left" data-delay="100">
               <h2>Automation</h2>
               <p>Python & Shell Scripting</p>
-              <button>Get Started</button>
+              <button>Details</button>
             </div>
           </div>
         </div>
@@ -237,6 +241,11 @@
         </div>
       </section>
     </div>
-    <script src="app.js"></script>
+    <script src="app.js">
+           document.getElementById('myButton').addEventListener('click', function() {
+        // Add your button logic here
+        console.log('Button clicked!');
+      });
+    </script>
   </body>
 </html>

@@ -394,7 +394,7 @@
   justify-content: center;
   flex-wrap: wrap;
   padding: 0 20px; /* Add horizontal padding */
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto 2rem auto; /* Add bottom margin between containers */
   width: 100%;
 }
@@ -402,10 +402,10 @@
 /* First, ensure each card has proper positioning */
 .services__card {
   margin: 1rem;
-  height: 450px;
+  height: 525px;
   width: calc(33.333% - 2rem);
-  min-width: 250px;
-  max-width: 300px;
+  min-width: 300px;
+  max-width: 400px;
   border-radius: 4px;
   background-size: cover;
   position: relative;
@@ -594,6 +594,8 @@
   }
 
   .services__card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
     top: 240px;
     left: 20px;
     font-size: 1.5rem;
@@ -602,10 +604,12 @@
   .services__card p {
     top: 290px;
     left: 20px;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .services__card button {
+    padding: 1rem 2rem;
+    font-size: 1.1 rem;
     top: 340px;
     left: 20px;
   }

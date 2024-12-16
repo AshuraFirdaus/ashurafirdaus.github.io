@@ -1063,6 +1063,113 @@ html {
 
 /* ===== About Me Section CSS ===== */
 
+/* Section Container */
+.content-section {
+  width: 100%;
+  background-color: #141414;
+  padding: 4rem 0;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section Item */
+.section-item {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+
+/* Alternate items will reverse direction */
+.section-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Image Side */
+.section-image {
+  flex: 1;
+  max-width: 500px;
+}
+
+.section-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Side */
+.section-content {
+  flex: 1;
+  color: #fff;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.section-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #f4f4f4;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 968px) {
+  .content-section {
+    padding: 2rem 0;
+  }
+
+  .content-container {
+    padding: 0 1.5rem;
+  }
+
+  .section-item {
+    flex-direction: column !important; /* Override alternating layout */
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .section-image {
+    max-width: 100%;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content-section {
+    padding: 1.5rem 0;
+  }
+
+  .content-container {
+    padding: 0 1rem;
+  }
+
+  .section-item {
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-text {
+    font-size: 1rem;
+  }
+}
+
 /* ===== Activities Section CSS ===== */
 
 /* ===== Projects Section CSS ===== */

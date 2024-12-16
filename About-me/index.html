@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Muhamad Firdaus Portofolio</title>
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="/ashurafirdaus.github.io/styles.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
@@ -68,15 +68,16 @@
     </nav>
 
     <!-- Blog Sections -->
-    <section class="blog-section">
-      <div class="blog-container">
-        <div class="blog-container reveal-from-right">
-          <div class="blog-content">
-            <div class="blog-image">
-              <img src="/images/about-me.png" alt="Blog image" />
-            </div>
-            <div class="blog-text" data-delay="0">
-              <h2>Introduction</h2>
+    <div class="blog">
+      <div class="blog-container reveal-from-left">
+        <!-- First blog post (image left, text right) -->
+        <article class="blog-post">
+          <div class="blog-image-wrapper reveal-from-left" data-delay="400">
+            <img src="../images/about-me.png" alt="Description" />
+          </div>
+          <div class="blog-content-wrapper reveal-from-left" data-delay="300">
+            <h2 class="blog-title">Sticking to the code</h2>
+            <div class="blog-content">
               <p>
                 A Computer Science student graduated from Institut Sains dan
                 Teknologi Nasional, Jakarta. Always eager to learn and update
@@ -89,9 +90,31 @@
               </p>
             </div>
           </div>
-        </div>
+        </article>
+
+        <!-- Second blog post (image right, text left) -->
+        <article class="blog-post">
+          <div class="blog-image-wrapper reveal-from-right" data-delay="400">
+            <img src="../images/about-me.png" alt="Description" />
+          </div>
+          <div class="blog-content-wrapper reveal-from-right" data-delay="300">
+            <h2 class="blog-title">Introduction</h2>
+            <div class="blog-content">
+              <p>
+                A Computer Science student graduated from Institut Sains dan
+                Teknologi Nasional, Jakarta. Always eager to learn and update
+                his knowledge regarding anything new about technology.
+              </p>
+              <p>
+                On free time he usually watches some anime and enjoying time to
+                play some games, active on IT Community gathering and love to
+                exchange knowledge with everyone.
+              </p>
+            </div>
+          </div>
+        </article>
       </div>
-    </section>
+    </div>
 
     <!-- Footer Section -->
     <div class="footer__container">
@@ -178,7 +201,7 @@
         </div>
       </section>
     </div>
-    <script src="app.js">
+    <script src="../app.js">
            document.getElementById('myButton').addEventListener('click', function() {
         console.log('Button clicked!');
       });

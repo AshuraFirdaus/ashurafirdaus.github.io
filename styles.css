@@ -645,7 +645,9 @@ html {
     padding: 0 10px;
   }
 
+  .blog-image,
   .blog-text {
+    width: 95%;
     padding: 0 10px;
   }
 
@@ -900,11 +902,16 @@ html {
   gap: 2rem;
   flex-direction: column; /* Stack content vertically on mobile */
   width: 100%;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding: 0 20px; /* Add padding on sides */
 }
 
 .blog-image {
   flex: 1;
   min-width: 300px; /* Minimum width before wrapping */
+  max-width: 600px; /* Limit maximum width */
+  margin: 0 15px; /* Add margin on sides */
   width: 100%;
   margin-bottom: 20px;
   border-radius: 4px; /* Optional: for rounded corners */
@@ -922,8 +929,9 @@ html {
 .blog-text {
   flex: 2;
   min-width: 300px; /* Minimum width before wrapping */
+  max-width: 600px; /* Limit maximum width */
   width: 100%;
-  padding: 0;
+  padding: 0 15px; /* Add padding on sides */
 }
 
 .blog-text h2 {
@@ -943,14 +951,23 @@ html {
 @media screen and (max-width: 768px) {
   .blog-content {
     flex-direction: column;
+    padding: 0 20px;
   }
 
-  .blog-image {
-    width: 100%;
+  .blog-container {
+    padding: 0 15px;
   }
 
+  .blog-image,
   .blog-text {
-    width: 100%;
+    width: 90%; /* Take up most of the container width but not all */
+    margin: 10px auto; /* Center with auto margins */
+    padding: 0 15px;
+  }
+
+  /* Add space between image and text */
+  .blog-image + .blog-text {
+    margin-top: 20px;
   }
 }
 

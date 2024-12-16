@@ -553,6 +553,20 @@
   /* ... other existing styles ... */
 }
 
+/* Fix viewport overflow issues */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  position: relative;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 960px) {
   .services {
@@ -621,6 +635,41 @@
     max-width: 1400px;
     margin: 0 auto 2rem auto; /* Reduce bottom margin between containers */
     width: 100%;
+  }
+
+  .blog-content {
+    padding: 0;
+  }
+
+  .blog-container {
+    padding: 0 10px;
+  }
+
+  .blog-text {
+    padding: 0 10px;
+  }
+
+  /* Ensure images don't overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Fix any potential navbar issues on mobile */
+  .navbar {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+
+  /* Ensure all containers respect viewport width */
+  .container,
+  .services__container,
+  .footer__container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 }
 
@@ -806,23 +855,35 @@
 .blog-section {
   padding: 4rem 0;
   background: #fff; /* or any background color you prefer */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .blog-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 .blog-content {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  flex-direction: column; /* Stack content vertically on mobile */
+  width: 100%;
 }
 
 .blog-image {
   flex: 1;
   min-width: 300px; /* Minimum width before wrapping */
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .blog-image img {
@@ -830,11 +891,15 @@
   height: auto;
   object-fit: cover;
   border-radius: 8px; /* Optional: rounded corners */
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .blog-text {
   flex: 2;
   min-width: 300px; /* Minimum width before wrapping */
+  width: 100%;
+  padding: 0;
 }
 
 .blog-text h2 {

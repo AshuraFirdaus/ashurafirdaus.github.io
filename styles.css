@@ -637,33 +637,6 @@ html {
     width: 100%;
   }
 
-  .blog-content {
-    padding: 0;
-    width: 100%;
-  }
-
-  .blog-container {
-    width: 90%;
-    padding: 0 10px;
-  }
-
-  .blog-image,
-  .blog-text {
-    width: 95%;
-    padding: 0;
-  }
-
-  .blog-image {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .blog-text {
-    width: 90%;
-    margin: 0 auto;
-    padding: 20px 0;
-  }
-
   /* Ensure images don't overflow */
   img {
     max-width: 100%;
@@ -818,29 +791,6 @@ html {
     padding: 10px;
     width: 100%;
   }
-
-  .blog-container {
-    padding: 0 15px; /* Reduced padding on mobile */
-  }
-
-  .blog-content {
-    flex-direction: column;
-    padding: 0 10px;
-  }
-
-  .blog-image {
-    margin: 0 10px; /* Add margin to prevent edge touching */
-  }
-
-  .blog-text {
-    padding: 0 10px;
-    margin: 0 10px; /* Add margin to prevent edge touching */
-  }
-
-  /* Ensure proper spacing between elements */
-  .blog-image + .blog-text {
-    margin-top: 20px;
-  }
 }
 
 /* Dropdown styling */
@@ -889,175 +839,99 @@ html {
   font-size: 0.7em;
   margin-left: 5px;
 }
+/* Blog Handler*/
 
-.blog-section {
-  padding: 4rem 0;
-  background: #fff; /* or any background color you prefer */
+.blog {
+  position: relative;
+  z-index: 1;
+  background-color: #141414;
   width: 100%;
-  padding: 20px;
-  box-sizing: border-box; /* Include padding in width calculation */
-  overflow: hidden; /* Prevent overflow */
+  min-height: 100vh;
+  padding: 2rem 0;
+  margin: 0;
 }
 
+/* Blog Container */
 .blog-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  width: 90%; /* Slightly less than full width */
+  background-color: #141414;
   max-width: 100%;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 2rem;
   box-sizing: border-box;
-  overflow: hidden; /* Prevent overflow */
+  color: #fff;
 }
 
-.blog-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  flex-direction: row; /* Force horizontal layout */
+/* Blog Post */
+
+.blog-post {
   width: 100%;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  padding: 0 20px; /* Add padding on sides */
-  align-items: flex-start; /* Align to top */
-  margin-bottom: 2rem; /* Space between blog sections */
-  flex-wrap: nowrap; /* Prevent wrapping */
-  max-width: 1100px; /* Maximum width for content */
-  margin: 0 auto; /* Center the content */
-  box-sizing: border-box;
+  margin-bottom: 3rem;
 }
 
-/* For blog sections with image on right */
-.blog-content.image-right {
-  flex-direction: row-reverse;
-}
-
-.blog-image {
-  flex: 0 0 40%; /* Don't grow, don't shrink, take 40% width */
-  min-width: 300px; /* Minimum width before wrapping */
-  max-width: 500px; /* Limit maximum width */
-  margin: 0 15px; /* Add margin on sides */
-  width: 300px; /* Fixed width instead of percentage */
-  margin-bottom: 20px;
-  border-radius: 4px; /* Optional: for rounded corners */
-  padding: 0 10px;
-  box-sizing: border-box;
-}
-
-.blog-image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px; /* Optional: rounded corners */
-  max-width: 100%; /* Ensure image doesn't overflow */
-  object-fit: cover;
-  display: block;
-}
-
-.blog-text {
-  flex: 0 0 50%; /* Don't grow, don't shrink, take 50% width */
-  min-width: 300px; /* Minimum width before wrapping */
-  max-width: 600px; /* Limit maximum width */
-  width: 55%;
-  padding: 0 10px; /* Add padding on sides */
-  padding-left: 20px;
-  box-sizing: border-box;
-}
-
-.blog-text h2 {
-  color: #131313;
-  margin-bottom: 1rem;
-  font-size: 2rem;
-}
-
-.blog-text p {
+/* Blog Title */
+.blog-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
   color: #333;
-  line-height: 1.6;
-  margin-bottom: 1rem;
+}
+
+/* Blog Content */
+.blog-content {
+  width: 80%;
+  line-height: 1.8;
   font-size: 1.1rem;
+  color: #ffffff;
+  text-align: justify;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  align-items: center;
+  justify-self: center;
+  align-items: center;
 }
 
-/* Responsive adjustments */
+/* Blog Images */
+.blog-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog Paragraphs */
+.blog-content p {
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-  .blog-content {
-    flex-direction: column;
-    padding: 0 20px;
+  .blog-container {
     padding: 1rem;
-    width: 100%;
   }
 
-  .blog-container {
-    width: 95%;
-    padding: 0 15px;
-  }
-
-  .blog-image,
-  .blog-text {
-    width: 90%; /* Take up most of the container width but not all */
-    margin: 10px auto; /* Center with auto margins */
-    padding: 0 15px;
-    max-width: 400px; /* Limit width on small screens */
-  }
-
-  blog-text {
-    width: 100%;
-    padding: 20px 10px;
-  }
-
-  /* Add space between image and text */
-  .blog-image + .blog-text {
-    margin-top: 20px;
-  }
-
-  .blog-content,
-  .blog-content.image-right {
-    flex-direction: column;
-    padding: 0 20px;
-  }
-
-  .blog-image,
-  .blog-text {
-    flex: 0 0 100%;
-    width: 90%;
-    margin: 10px auto;
-  }
-}
-
-/* Extra small screens */
-@media screen and (max-width: 400px) {
-  .blog-container {
-    width: 85%; /* Reduce width further */
+  .blog-title {
+    font-size: 2rem;
   }
 
   .blog-content {
-    padding: 0.5rem;
-  }
-
-  .blog-image,
-  .blog-text {
-    width: 90%; /* Slightly narrower than container */
-    max-width: 320px;
-    padding: 0 5px;
-  }
-
-  .blog-text {
-    margin-top: 1rem;
+    font-size: 1rem;
   }
 }
 
-/* For dark theme (optional) */
-@media (prefers-color-scheme: dark) {
-  .blog-section {
-    background: #131313;
+@media screen and (max-width: 480px) {
+  .blog-container {
+    padding: 0.8rem;
   }
 
-  .blog-text h2 {
-    color: #fff;
+  .blog-title {
+    font-size: 1.75rem;
   }
 
-  .blog-text p {
-    color: #f7f7f7;
+  .blog-content {
+    font-size: 0.95rem;
   }
 }
 

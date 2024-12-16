@@ -803,6 +803,29 @@ html {
     padding: 10px;
     width: 100%;
   }
+
+  .blog-container {
+    padding: 0 15px; /* Reduced padding on mobile */
+  }
+
+  .blog-content {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .blog-image {
+    margin: 0 10px; /* Add margin to prevent edge touching */
+  }
+
+  .blog-text {
+    padding: 0 10px;
+    margin: 0 10px; /* Add margin to prevent edge touching */
+  }
+
+  /* Ensure proper spacing between elements */
+  .blog-image + .blog-text {
+    margin-top: 20px;
+  }
 }
 
 /* Dropdown styling */
@@ -884,6 +907,7 @@ html {
   min-width: 300px; /* Minimum width before wrapping */
   width: 100%;
   margin-bottom: 20px;
+  border-radius: 4px; /* Optional: for rounded corners */
 }
 
 .blog-image img {

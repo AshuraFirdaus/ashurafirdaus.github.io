@@ -900,13 +900,14 @@ html {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  flex-direction: column; /* Stack content vertically on mobile */
+  flex-direction: row; /* Force horizontal layout */
   width: 100%;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   padding: 0 20px; /* Add padding on sides */
   align-items: flex-start; /* Align to top */
   margin-bottom: 2rem; /* Space between blog sections */
+  flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 /* For blog sections with image on right */

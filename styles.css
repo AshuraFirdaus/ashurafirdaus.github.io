@@ -868,6 +868,9 @@ html {
   padding: 2rem;
   box-sizing: border-box;
   color: #fff;
+  display: flex;
+  align-items: center; /* Ensure cross-browser compatibility */
+  justify-content: center;
 }
 
 /* Blog Post */

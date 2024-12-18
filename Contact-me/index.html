@@ -24,7 +24,7 @@
     <!-- Navbar Section -->
     <nav class="navbar">
       <div class="navbar__container">
-        <a href="http//:ashurafirdaus.github.io" id="navbar__logo"
+        <a href="/ashurafirdaus.github.io/" id="navbar__logo"
           ><i class="fa-solid fa-terminal"></i>Muhamad Firdaus</a
         >
         <div class="navbar__toggle" id="mobile-menu">
@@ -33,13 +33,15 @@
         </div>
         <ul class="navbar__menu">
           <li class="navbar__item">
-            <a href="#" class="navbar__links">Home</a>
+            <a href="/ashurafirdaus.github.io/" class="navbar__links">Home</a>
           </li>
           <li class="navbar__item dropdown">
-            <a href="#" class="navbar__links">Projects</a>
+            <a href="javascript:void(0)" id="myButton" class="navbar__links"
+              >Projects</a
+            >
             <ul class="dropdown__menu">
               <li><a href="https://github.com/AshuraFirdaus">Github</a></li>
-              <li><a href="/Applications/">Applications</a></li>
+              <li><a href="../Applications/">Applications</a></li>
               <li>
                 <a
                   href="https://drive.google.com/drive/folders/1BC69aZdIMxcsb2cS0Uh4iBLMpB5Avgd6?usp=drive_link"
@@ -49,7 +51,9 @@
             </ul>
           </li>
           <li class="navbar__item dropdown">
-            <a href="#" class="navbar__links">Certifications</a>
+            <a href="javascript:void(0)" id="myButton" class="navbar__links"
+              >Certifications</a
+            >
             <ul class="dropdown__menu">
               <li>
                 <a href="../Certifications/Professional/">Professional</a>
@@ -65,20 +69,36 @@
       </div>
     </nav>
 
-    <!-- About Me Section -->
-    <section class="blog-section">
-      <div class="blog-container">
-        <div class="blog-content">
-          <div class="blog-image">
-            <img src="../images/Cloud.jpg" alt="Blog image" />
+    <section class="card-section">
+      <div class="card-container">
+        <!-- First Row of Cards -->
+        <div class="card-row">
+          <!-- Card 1 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="../images/gmail.jpg" alt="Card Image" />
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Email Me</h3>
+              <p class="card-text">Contact me through email.</p>
+            </div>
+            <a href="mailto:firdausmail07@gmail.com" class="card-button"
+              >Email</a
+            >
           </div>
-          <div class="blog-text">
-            <h2>Contact Me</h2>
-            <p>
-              Email : firdausmail07@gmail.com LinkedIn :
-              https://www.linkedin.com/in/muhamadfirdaus24 Instagram :
-              https://www.instagram.com/ashurafirdaus/?hl=id
-            </p>
+          <div class="card">
+            <div class="card-image">
+              <img src="../images/linkedin.png" alt="Card Image" />
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">LinkedIn</h3>
+              <p class="card-text">Contact me through LinkedIn.</p>
+            </div>
+            <a
+              href="https://www.linkedin.com/messaging/compose/?recipient=muhamadfirdaus24"
+              class="card-button"
+              >Email</a
+            >
           </div>
         </div>
       </div>
@@ -111,7 +131,7 @@
             <h2>Activities</h2>
             <a href="../Activities/IT-gathering/">IT Community</a>
             <a href="../Activities/Hackathon/">Hackathon</a>
-            <a href="../Activities/Events/">Public Events</a> <a href="/"></a>
+            <a href="../Activities/Events/">Public Events</a>
           </div>
           <div class="footer__link--items">
             <h2>Social Media</h2>
@@ -126,7 +146,7 @@
       <section class="social__media">
         <div class="social__media--wrap">
           <div class="footer__logo">
-            <a href="/" id="footer__logo"
+            <a id="footer__logo"
               ><i class="fa-solid fa-code"></i>ashurafirdaus</a
             >
           </div>
@@ -170,6 +190,10 @@
         </div>
       </section>
     </div>
-    <script src="../app.js"></script>
+    <script src="../app.js">
+           document.getElementById('myButton').addEventListener('click', function() {
+        console.log('Button clicked!');
+      });
+    </script>
   </body>
 </html>

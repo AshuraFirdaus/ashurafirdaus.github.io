@@ -79,3 +79,48 @@ function initRevealOnScroll() {
 
 // Initialize when DOM is loaded
 document.addEventListener("DOMContentLoaded", initRevealOnScroll);
+
+// Pop Up Button
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Get all card buttons
+  const cardButtons = document.querySelectorAll(".card-button");
+  const popups = document.querySelectorAll(".popup-overlay");
+
+  // Add click event to all card buttons
+  cardButtons.forEach((button, index) => {
+    button.addEventListener("click", function () {
+      const popup = popups[index];
+      popup.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  // Add close functionality to all popups
+  popups.forEach((popup) => {
+    const closeButton = popup.querySelector(".close-popup");
+
+    closeButton.addEventListener("click", function () {
+      popup.style.display = "none";
+      document.body.style.overflow = "";
+    });
+
+    // Close when clicking outside the image
+    popup.addEventListener("click", function (e) {
+      if (e.target === popup) {
+        popup.style.display = "none";
+        document.body.style.overflow = "";
+      }
+    });
+  });
+
+  // Close popup when pressing Escape key
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      popups.forEach((popup) => {
+        popup.style.display = "none";
+        document.body.style.overflow = "";
+      });
+    }
+  });
+});

@@ -900,7 +900,7 @@ html {
 .blog-content-wrapper {
   flex: 1;
   min-width: 0; /* Prevents flex item from overflowing */
-  width: 60%;
+  width: 90%;
 }
 
 /* Blog Image Wrapper */

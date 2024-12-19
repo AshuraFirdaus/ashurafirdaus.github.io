@@ -124,3 +124,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Select dropdown elements
+const dropdowns = document.querySelectorAll(".dropdown");
+
+// Add event listeners to each dropdown
+dropdowns.forEach((dropdown) => {
+  const dropdownMenu = dropdown.querySelector(".dropdown__menu");
+
+  // Toggle dropdown visibility on click
+  dropdown.addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevent click from propagating to other elements
+    dropdownMenu.classList.toggle("show"); // Toggle dropdown visibility
+  });
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", () => {
+  dropdowns.forEach((dropdown) => {
+    const dropdownMenu = dropdown.querySelector(".dropdown__menu");
+    dropdownMenu.classList.remove("show"); // Close all dropdowns
+  });
+});

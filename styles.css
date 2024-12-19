@@ -802,32 +802,52 @@ html {
 }
 
 /* Dropdown styling */
+/* Base dropdown container */
 .dropdown {
   position: relative;
 }
 
+/* Dropdown menu styling */
 .dropdown__menu {
+  display: none;
   position: absolute;
+  background-color: #141414;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 999;
   top: 100%;
   left: 0;
-  background-color: #131313;
-  padding: 1rem 0;
-  min-width: 160px;
-  list-style: none;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
 }
 
-.dropdown:hover .dropdown__menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+/* Nested dropdown styling */
+.dropdown__menu .dropdown__menu {
+  left: 100%; /* Position to the right of parent */
+  top: 0; /* Align with parent top */
+  z-index: 1000; /* Higher than parent dropdown */
 }
 
+/* Show dropdown on hover for desktop */
+@media screen and (min-width: 901px) {
+  .dropdown:hover > .dropdown__menu {
+    display: block;
+  }
+
+  /* Handle nested dropdowns */
+  .dropdown__menu .dropdown:hover > .dropdown__menu {
+    display: block;
+  }
+}
+
+/* Show dropdown when .show class is added (for mobile) */
+.dropdown__menu.show {
+  display: block;
+}
+
+/* Dropdown items styling */
 .dropdown__menu li {
+  list-style: none;
   padding: 0.5rem 1rem;
+  position: relative; /* Important for nested dropdowns */
 }
 
 .dropdown__menu a {
@@ -835,6 +855,52 @@ html {
   text-decoration: none;
   font-size: 16px;
   display: block;
+  padding: 8px 0;
+}
+
+.dropdown__menu a:hover {
+  color: #00fefe;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 900px) {
+  .dropdown__menu {
+    position: relative; /* Change to relative on mobile */
+    width: 100%;
+    background-color: #141414;
+    padding: 15px;
+  }
+
+  /* Nested dropdowns on mobile */
+  .dropdown__menu .dropdown__menu {
+    left: 0;
+    position: relative;
+    width: 100%;
+    padding-left: 20px; /* Indent nested items */
+  }
+
+  .dropdown__menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dropdown__menu li:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Add visual indicator for items with submenus */
+.dropdown__menu .dropdown > a::after {
+  content: "▶";
+  position: absolute;
+  right: 10px;
+  font-size: 0.8em;
+}
+
+/* Rotate arrow on mobile */
+@media screen and (max-width: 900px) {
+  .dropdown__menu .dropdown > a::after {
+    content: "▼";
+  }
 }
 
 .dropdown__menu a:hover {

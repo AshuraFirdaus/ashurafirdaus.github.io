@@ -6,15 +6,6 @@ menu.addEventListener("click", function () {
   menuLinks.classList.toggle("active");
 });
 
-// Close mobile menu when a link is clicked
-const navLinks = document.querySelectorAll(".navbar__links");
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    menu.classList.remove("is-active");
-    menuLinks.classList.remove("active");
-  });
-});
-
 function initRevealOnScroll() {
   const options = {
     root: null,

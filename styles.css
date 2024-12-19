@@ -125,12 +125,17 @@
 
   .navbar__menu.active {
     background: #131313;
-    top: 100%;
+    /* top: 100%; */
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: 99;
-    height: 50vh;
+    z-index: 10000; /* Higher priority */
+    /* height: 50vh; */
     font-size: 1.6rem;
+    position: fixed; /* Ensure it overlays all content */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it covers the full width */
+    height: 100vh; /* Full height of the viewport */
   }
 
   #navbar__logo {
@@ -143,7 +148,6 @@
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
     background: #fff;
-    display: block;
   }
 
   .navbar__item {
@@ -167,7 +171,7 @@
     align-items: center;
     width: 80%;
     height: 80px;
-    margin: 0 auto;
+    margin: 0;
   }
 
   #mobile-menu {
@@ -175,6 +179,7 @@
     top: 20%;
     right: 5%;
     transform: translate(5%, 20%);
+    z-index: 10001;
   }
 
   .navbar__toggle .bar {
@@ -877,7 +882,7 @@ html {
 /* Blog Post */
 
 .blog-post {
-  width: 80%;
+  width: auto;
   height: 80%;
   margin-bottom: 4rem;
   display: flex;

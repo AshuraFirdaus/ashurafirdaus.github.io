@@ -143,6 +143,7 @@
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
     background: #fff;
+    display: block;
   }
 
   .navbar__item {
@@ -166,7 +167,7 @@
     align-items: center;
     width: 80%;
     height: 80px;
-    margin: 0;
+    margin: 0 auto;
   }
 
   #mobile-menu {

@@ -841,6 +841,7 @@ html {
 /* Show dropdown when .show class is added (for mobile) */
 .dropdown__menu.show {
   display: block;
+  top: 1%;
 }
 
 /* Dropdown items styling */

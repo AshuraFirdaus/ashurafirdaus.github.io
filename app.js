@@ -146,3 +146,18 @@ document.addEventListener("click", () => {
     dropdownMenu.classList.remove("show"); // Close all dropdowns
   });
 });
+
+document.querySelectorAll(".card-button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const card = button.closest(".card");
+    const popup = card.nextElementSibling;
+    popup.style.display = "flex";
+  });
+});
+
+document.querySelectorAll(".close-popup").forEach((button) => {
+  button.addEventListener("click", () => {
+    const popup = button.closest(".popup-overlay");
+    popup.style.display = "none";
+  });
+});

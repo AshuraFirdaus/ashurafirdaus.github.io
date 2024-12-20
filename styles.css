@@ -1392,25 +1392,48 @@ html {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   height: auto; /* Allow card to expand based on content */
   min-height: 220px; /* Minimum height to maintain consistency */
+  width: 400px; /* or your desired fixed width */
+  height: 450px; /* or your desired fixed height */
+  margin: 0px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-image {
   width: 100%;
   padding-top: 56.25%; /* For 16:9 aspect ratio */
   position: relative;
+  height: 200px; /* Fixed height for all card images */
+  overflow: hidden;
 }
 
-.card-image img {
+.card-image img,
+.card-image object {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
+  display: block;
+}
+
+/* Add these new styles for better PDF preview */
+.card-image object[type="application/pdf"] {
+  transform: scale(1); /* Adjust this value if needed */
+  transform-origin: center;
+}
+
+/* Specific styling for PDF object to maintain aspect ratio */
+.card-image object {
+  object-fit: contain;
+  background-color: #f5f5f5; /* Light background for PDF viewer */
 }
 
 .card-content {
   padding: 1.5rem;
+
   flex: 1; /* Allow content to take remaining space */
 }
 
@@ -1489,4 +1512,24 @@ html {
   to {
     opacity: 1;
   }
+}
+
+/* PDF Showcase Handler */
+
+.pdf-content {
+  width: 90%;
+  height: 90vh;
+  max-width: 1000px;
+  background: white;
+  padding: 20px;
+}
+
+.card-image object {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.popup-content.pdf-content {
+  overflow: hidden;
 }

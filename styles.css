@@ -175,8 +175,8 @@
   }
 
   #mobile-menu {
-    position: absolute;
-    top: 20%;
+    position: fixed;
+    top: 5%;
     right: 5%;
     transform: translate(5%, 20%);
     z-index: 10001;

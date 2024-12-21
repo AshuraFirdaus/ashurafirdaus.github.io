@@ -1181,8 +1181,8 @@ html {
 .section-image {
   flex: 1;
   max-width: 500px;
-  width: 400px; /* Set your desired fixed width */
-  height: 400px; /* Set your desired fixed height */
+  width: 400px; /* Set  desired fixed width */
+  height: 400px; /* Set  desired fixed height */
   overflow: hidden;
   flex-shrink: 0; /* Prevents the image from shrinking */
 }
@@ -1401,8 +1401,8 @@ html {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   height: auto; /* Allow card to expand based on content */
   min-height: 220px; /* Minimum height to maintain consistency */
-  width: 400px; /* or your desired fixed width */
-  height: 450px; /* or your desired fixed height */
+  width: 400px; /* or  desired fixed width */
+  height: 450px; /* or  desired fixed height */
   margin: 0px;
   border-radius: 10px;
   overflow: hidden;

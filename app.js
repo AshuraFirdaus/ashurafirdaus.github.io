@@ -172,7 +172,7 @@ function toggleMenu() {
     setTimeout(() => {
       menu.classList.remove("active");
       menu.classList.remove("closing");
-    }, 500); // This should match your transition duration (0.5s = 500ms)
+    }, 500); // This should match transition duration (0.5s = 500ms)
   } else {
     // Opening animation
     menu.classList.add("active");
@@ -180,5 +180,4 @@ function toggleMenu() {
   }
 }
 
-// Add this to your hamburger button click event
 hamburger.addEventListener("click", toggleMenu);

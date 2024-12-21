@@ -161,3 +161,24 @@ document.querySelectorAll(".close-popup").forEach((button) => {
     popup.style.display = "none";
   });
 });
+
+function toggleMenu() {
+  if (menu.classList.contains("active")) {
+    // Closing animation
+    menu.classList.add("closing");
+    hamburger.classList.remove("is-active");
+
+    // Wait for animation to finish before hiding menu
+    setTimeout(() => {
+      menu.classList.remove("active");
+      menu.classList.remove("closing");
+    }, 500); // This should match your transition duration (0.5s = 500ms)
+  } else {
+    // Opening animation
+    menu.classList.add("active");
+    hamburger.classList.add("is-active");
+  }
+}
+
+// Add this to your hamburger button click event
+hamburger.addEventListener("click", toggleMenu);

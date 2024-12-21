@@ -138,6 +138,13 @@
     height: 100vh; /* Full height of the viewport */
   }
 
+  /* This class for the closing animation */
+  .navbar__menu.closing {
+    opacity: 0;
+    top: -100vh;
+    transition: all 0.5s ease;
+  }
+
   #navbar__logo {
     padding-left: 25px;
   }

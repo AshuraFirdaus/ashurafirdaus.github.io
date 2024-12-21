@@ -180,6 +180,8 @@
     right: 5%;
     transform: translate(5%, 20%);
     z-index: 10001;
+    background-color: green;
+    border-radius: 10px;
   }
 
   .navbar__toggle .bar {
